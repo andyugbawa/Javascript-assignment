@@ -25,14 +25,15 @@
 
 let myNameString = 'manosAkpujiha';
 
-let manos = "Manos"
-let bigName = "Akpujiha"
+function name(){
+  
+const pole = myNameString.slice(0,5)
 
+const pile= myNameString.slice(5,16)
+  return `${pole},${pile}`
 
-function name(manos,bigName){
-  return [manos,bigName]
 }
-console.log(name(manos,bigName))
+console.log(name())
 
 
 
@@ -74,12 +75,14 @@ console.log(reverseArray(fruits))
 
    const p =document.querySelector("p")
 
-   function createAtr(){
-     p.setAttribute("firstname","andy")
-     p.setAttribute("lastname","ugbawa")
-     p.setAttribute("age",40)
-     p.setAttribute("stateoforigin","Delta")
-     document.body.appendChild(p)
+   p.setAttribute("firstname","andy")
+   p.setAttribute("lastname","ugbawa")
+   p.setAttribute("age",40)
+   p.setAttribute("stateoforigin","Delta")
+   document.body.appendChild(p)
+
+   function createAtr(firstname,lastname,age,stateoforigin){
+    return `${firstname} ${lastname}${age}${stateoforigin}`
 
    }
 
@@ -88,11 +91,16 @@ console.log(reverseArray(fruits))
   
   // e.g.
   // <p frist-name: 'andy' last-name: 'ugbawa' age: 40 state-of-origin: 'delta'>
+  function profile(){
+  
+  let P = document.querySelector("p")
+  let firstNameT =P.getAttribute('firstname')
+  let lastNameT =P.getAttribute('lastname')
+  let stateOfOrigin=P.getAttribute('stateoforigin')
+  let newArray = [firstNameT,lastNameT,stateOfOrigin];
+  return newArray
 
-let P = document.querySelector("p")
-let firstNameT =P.getAttribute('firstname')
-let lastNameT =P.getAttribute('lastname')
-let stateOfOrigin=P.getAttribute('stateoforigin')
-let newArray = [firstNameT,lastNameT,stateOfOrigin];
-console.log(newArray)
+}
+
+console.log(profile())
 
